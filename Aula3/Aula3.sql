@@ -7,12 +7,17 @@
 --Shows
 --???
 
+-- DDL (Data Definition Language)
+-- CREATE table
 -- DROP -> REMOVER TABELA
+-- ALTER table -> altera TABELA
 
--- create table
--- DROP table
--- alter table => altera TABELA
+-- DML (Data Manipulation Language)
+-- INSERT
 -- update => atualiza DADOS
+-- DELETE
+-- SELECT
+
 
 alter table bandas add column BATERISTA VARCHAR(100);
 
@@ -26,14 +31,9 @@ alter table bandas add column BATERISTA VARCHAR(100);
 -- de uma banda que tem Cosmic
 
 -- Usar like com cuidado. Nao eh performatico
-like '%Cosmic%'
-
+-- like '%Cosmic%'
 
 update bandas set vocalista='Guilherme' where nome like '%Cosmic%';
-
-update bandas set vocalista='Guilherme' where nome 
-like '%Cosmic%';
-
 
 update bandas set BATERISTA='Igor'
 	where num_integrantes <= 5;
@@ -74,20 +74,33 @@ insert into palcos values
 (2, 'Palco Lunar', 3000);
 
 select * from SHOWS;
-
+drop table shows;
 select * from bandas;
 
 alter table SHOWS add column id integer;
 alter table SHOWS add primary KEY (id);
 
-update bandas set baterista='Ramon' where id=2;
-
+update bandas set baterista=null;
+select * from bandas;
 
 alter table SHOWS rename column id_shows to id;
 
+-- deleter chave primaria
+alter table SHOWS drop constraint shows_pkey;
 
-1.000.000
+alter table SHOWS alter column data type date USING data::date;
 
+alter table SHOWS add column if not exists abcd varchar;
+alter table SHOWS drop column if exists abcd;
+
+alter table bandas alter column baterista set default 'SEM BATERISTA';
+alter table bandas alter column baterista drop default;
+
+-- flightway
+-- liquibase
+
+insert into bandas (id, nome) values (5, 'Ramones');
+select * from bandas;
 -- id = estrutura de hash
 
 --
