@@ -9,14 +9,21 @@ INSERT INTO Shows (Id_Banda, Id_Palco, Data, Hora, Preco) VALUES (3, 1, '2024-07
 -- inner JOIN => Retorna as linhas em que ha pelo menos uma
 -- correspondencia em ambas as tabelas conectadas
 
-SELECT data, hora, preco, nome nome_banda, genero_musical, num_integrantes, pais, nome_palco, capacidade, vocalista FROM Shows
+SELECT Bandas.nome , shows."data" , palcos.nome_palco  
+FROM Shows
 	INNER JOIN Bandas ON Shows.Id_Banda = Bandas.Id
-	INNER JOIN Palcos ON Shows.Id_Palco = Palcos.id_palco ;
+	INNER JOIN Palcos ON Shows.Id_Palco = Palcos.id_palco;
+
+-- INNER sao para informacoes que nao sao nulas
+
+
 
 , Palcos;
+select * from Shows;
 
 select * from festival_musica;
 
+delete from 
 
 
 create table festival_musica (
@@ -37,4 +44,9 @@ insert into festival_musica
 values ('2024-07-15','20:00:00',50.00,'The Cosmic Keys','Rock',6,'EUA','Palco Solar',5000,'Guilherme'),
 ('2024-07-15','22:00:00',40.00,'Electro Harmonix','Eletrônica',5,'França','Palco Lunar',3000,'Isa'),
 ('2024-07-16','18:00:00',30.00,'Jazz & Java','Jazz',4,'Brasil','Palco Solar',5000,'Gabi X');
+select * from festival_musica;
+
+
+-- PARA AULA 5 => LEFT JOIN E RIGHT JOIN
+-- OPCIONAL => REVISAR TEORIA DOS CONJUNTOS NA MATEMATICA
 
