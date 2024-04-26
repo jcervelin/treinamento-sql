@@ -25,7 +25,7 @@ insert into festival_musica
 ("data","hora","preco","nome_banda","genero_musical","num_integrantes","pais","nome_palco","capacidade","vocalista")
 values ('2024-07-15','20:00:00',50.00,'The Cosmic Keys','Rock',6,'EUA','Palco Solar',5000,'Guilherme'),
 ('2024-07-15','22:00:00',40.00,'Electro Harmonix','Eletrônica',5,'França','Palco Lunar',3000,'Isa'),
-('2024-07-16','18:00:00',30.00,'Jazz & Java','Jazz',4,'Brasil','Palco Solar',5000,'Gabi X');
+('2024-07-16','18:00:00',30.00,'Jazz & Show','Jazz',4,'Brasil','Palco Solar',5000,'Gabi X');
 ```
 
 

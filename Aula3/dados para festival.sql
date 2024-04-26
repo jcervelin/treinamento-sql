@@ -1,6 +1,6 @@
 INSERT INTO Bandas (Nome, Genero, Pais) VALUES ('The Cosmic Keys', 'Rock', 'EUA');
 INSERT INTO Bandas (Nome, Genero, Pais) VALUES ('Electro Harmonix', 'Eletrônica', 'França');
-INSERT INTO Bandas (Nome, Genero, Pais) VALUES ('Jazz & Java', 'Jazz', 'Brasil');
+INSERT INTO Bandas (Nome, Genero, Pais) VALUES ('Jazz & Show', 'Jazz', 'Brasil');
 
 INSERT INTO Palcos (Nome, Capacidade) VALUES ('Palco Solar', 5000);
 INSERT INTO Palcos (Nome, Capacidade) VALUES ('Palco Lunar', 3000);

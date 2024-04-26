@@ -12,12 +12,12 @@
 
 
 ## Atualizar Informações
-* A banda "Jazz & Java" decidiu mudar seu nome para "Jazz Fusion". Atualize o nome dela na tabela Bandas.
+* A banda "Jazz & Show" decidiu mudar seu nome para "Jazz Fusion". Atualize o nome dela na tabela Bandas.
 * O preço dos ingressos para os shows no "Palco Solar" deve ser aumentado em 10%. Suponha que os preços originais variam.
 * Aumentar em 10% o preco de todos os shows
 
 ## Deletar Dados
-* Suponha que o "Palco Lunar" será fechado para reformas, e todos os shows planejados para esse palco precisam ser cancelados. Delete esses shows da tabela Shows.
+* Suponha que o "Palco Lunar" será fechado para reformas, e todos os shows planejados para esse palco precisam ser cancelados. Delete esses shows da tabela Show.
 
 
 O entregavel para esta tarefa serao os comandos SQL para todas as operacoes acima

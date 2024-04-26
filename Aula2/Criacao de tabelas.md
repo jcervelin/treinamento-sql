@@ -6,7 +6,7 @@
 ???
 ### Palcos
 ???
-### Shows
+### Show
 ???
 
 ## Dados de Exemplo para Popular o Banco:
@@ -16,7 +16,7 @@ Sugestao de conteudo:
 ```
 ("The Cosmic Keys", "Rock", "EUA")
 ("Electro Harmonix", "Eletrônica", "França")
-("Jazz & Java", "Jazz", "Brasil")
+("Jazz & Show", "Jazz", "Brasil")
 ```
 ## Palcos:
 Sugestao de conteudo:
@@ -24,7 +24,7 @@ Sugestao de conteudo:
 ("Palco Solar", 5000)
 ("Palco Lunar", 3000)
 ```
-## Shows:
+## Show:
 Sugestao de conteudo:
 ```
 ("2024-07-15", "20:00", 50)

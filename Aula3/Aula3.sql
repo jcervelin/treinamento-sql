@@ -4,7 +4,7 @@
 --Palcos
 --???
 --
---Shows
+--Show
 --???
 
 -- DDL (Data Definition Language)
@@ -66,7 +66,7 @@ create table palcos(
 insert into bandas values 
 (1, 'The Cosmic Keys', 'Rock', 6, 'EUA'),
 (2, 'Electro Harmonix', 'Eletrônica', 5, 'França'),
-(3, 'Jazz & Java', 'Jazz', 4, 'Brasil');
+(3, 'Jazz & Show', 'Jazz', 4, 'Brasil');
 
 
 insert into palcos values
@@ -115,7 +115,7 @@ select * from bandas;
 --Nome
 --Capacidade
 --
---Shows
+--Show
 --Id
 --Id_Banda
 --Id_Palco
