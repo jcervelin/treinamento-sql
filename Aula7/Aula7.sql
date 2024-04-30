@@ -90,9 +90,9 @@ select
 from 
 	shows s
 inner join
-	Bandas b on s.id_banda = b.id 
+	Bandas b on s.banda_id = b.banda_id 
 inner join
-	palcos p on s.id_palco = p.id;
+	palcos p on s.palco_id = p.palco_id;
 	
 
 

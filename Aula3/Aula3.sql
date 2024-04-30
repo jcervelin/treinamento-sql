@@ -48,7 +48,7 @@ create table Shows (
 
 
 create table bandas(
-	id integer primary key,
+	banda_id integer primary key,
 	nome varchar(50),
 	genero_musical varchar(30),
 	num_integrantes int,
@@ -58,7 +58,7 @@ create table bandas(
 
 
 create table palcos(
-	id_palco int primary key,
+	palco_id int primary key,
 	nome_palco varchar(20),
 	capacidade int
 );
@@ -77,13 +77,13 @@ select * from SHOWS;
 drop table shows;
 select * from bandas;
 
-alter table SHOWS add column id integer;
-alter table SHOWS add primary KEY (id);
+alter table SHOWS add column show_id integer;
+alter table SHOWS add primary KEY (show_id);
 
 update bandas set baterista=null;
 select * from bandas;
 
-alter table SHOWS rename column id_shows to id;
+alter table SHOWS rename column show_id to id;
 
 -- deleter chave primaria
 alter table SHOWS drop constraint shows_pkey;
@@ -99,7 +99,7 @@ alter table bandas alter column baterista drop default;
 -- flightway
 -- liquibase
 
-insert into bandas (id, nome) values (5, 'Ramones');
+insert into bandas (banda_id, nome) values (5, 'Ramones');
 select * from bandas;
 -- id = estrutura de hash
 

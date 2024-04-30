@@ -3,16 +3,16 @@ from Shows, bandas, Palcos;
 
 select * from Shows;
 
-INSERT INTO Shows (Id_Banda, Id_Palco, Data, Hora, Preco) VALUES (1, 1, '2024-07-15', '20:00', 50.00);
-INSERT INTO Shows (Id_Banda, Id_Palco, Data, Hora, Preco) VALUES (2, 2, '2024-07-15', '22:00', 40.00);
-INSERT INTO Shows (Id_Banda, Id_Palco, Data, Hora, Preco) VALUES (3, 1, '2024-07-16', '18:00', 30.00);
+INSERT INTO Shows (Banda_id, Palco_id, Data, Hora, Preco) VALUES (1, 1, '2024-07-15', '20:00', 50.00);
+INSERT INTO Shows (Banda_id, Palco_id, Data, Hora, Preco) VALUES (2, 2, '2024-07-15', '22:00', 40.00);
+INSERT INTO Shows (Banda_id, Palco_id, Data, Hora, Preco) VALUES (3, 1, '2024-07-16', '18:00', 30.00);
 -- inner JOIN => Retorna as linhas em que ha pelo menos uma
 -- correspondencia em ambas as tabelas conectadas
 
 SELECT Bandas.nome , shows."data" , palcos.nome_palco  
 FROM Shows
-	INNER JOIN Bandas ON Shows.Id_Banda = Bandas.Id
-	INNER JOIN Palcos ON Shows.Id_Palco = Palcos.id_palco;
+	INNER JOIN Bandas ON Shows.Banda_id = Bandas.Banda_id
+	INNER JOIN Palcos ON Shows.Palco_id = Palcos.Palco_id;
 
 -- INNER sao para informacoes que nao sao nulas
 

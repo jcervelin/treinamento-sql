@@ -1,23 +1,23 @@
 CREATE TABLE Bandas (
-                        Id SERIAL PRIMARY KEY,
+                        banda_id SERIAL PRIMARY KEY,
                         Nome VARCHAR(100),
                         Genero VARCHAR(50),
                         Pais VARCHAR(50)
 );
 
 CREATE TABLE Palcos (
-                        Id SERIAL PRIMARY KEY,
+                        palco_id SERIAL PRIMARY KEY,
                         Nome VARCHAR(100),
                         Capacidade INT
 );
 
 CREATE TABLE Shows (
-                       Id SERIAL PRIMARY KEY,
-                       Id_Banda INT,
-                       Id_Palco INT,
+                       show_id SERIAL PRIMARY KEY,
+                       banda_id INT,
+                       palco_id INT,
                        Data DATE,
                        Hora TIME,
                        Preco DECIMAL(10, 2),
-                       FOREIGN KEY (Id_Banda) REFERENCES Bandas(Id),
-                       FOREIGN KEY (Id_Palco) REFERENCES Palcos(Id)
+                       FOREIGN KEY (banda_id) REFERENCES Bandas(banda_id),
+                       FOREIGN KEY (palco_id) REFERENCES Palcos(palco_id)
 );
