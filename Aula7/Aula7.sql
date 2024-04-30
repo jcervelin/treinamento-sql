@@ -36,9 +36,9 @@ select nome from bandas
 union
 select nome from Palcos;
 
-select Capacidade || ' ' || nome papibaquigrafo from Palcos
+select NOME from Palcos
 union all
-select Genero diversos from bandas;
+select Genero from bandas;
 
 
 -- CONTATENACOES DE VALORES
@@ -53,14 +53,67 @@ update bandas set vocalista='Firmino' where banda_id=2;
 update bandas set baterista='Adamastor' where banda_id=3;
 
 
-
+select * FROM bandas;
 -- para caso o valor seja nulo
 SELECT baterista || ' ' || vocalista AS integrantes FROM bandas;
-SELECT baterista || ' ' || COALESCE(vocalista, '') AS integrantes
+
+--COALESCE(vocalista, 'NAO TEM') => serve para colocar valor default
+-- se vocalista for NULL
+SELECT coalesce(baterista,'') || ' ' || COALESCE(vocalista, '') AS integrantes
 FROM bandas;
 
-SELECT concat(baterista, ' e ', vocalista) AS integrantes
-FROM bandas;
+
+SELECT baterista || ' E ' || vocalista AS integrantes FROM bandas;
+
+SELECT concat(baterista , ' E ' , vocalista) AS integrantes FROM bandas;
+
+SELECT concat(
+	coalesce(baterista,'SEM BATERISTA'), 
+	' E ', 
+	coalesce(vocalista,'SEM VOCALISTA')) AS integrantes 
+from bandas;
+
+
+select * FROM bandas;
+select concat(baterista,vocalista,nome) integrantes FROM bandas;
 
 
 -- VIEWS
+-- ELIMINAR TABELAS BANDAS PALCOS SHOWS
+-- RECRIAR USANDO SQL DA AULA 3
+create view Detalhes_Shows as
+select 
+	b.nome as "Nome da Banda",
+	p.nome as "Nome do Palco",
+	concat(s.data ,' - ',s.hora) "Data e Hora",
+	s.preco 
+from 
+	shows s
+inner join
+	Bandas b on s.id_banda = b.id 
+inner join
+	palcos p on s.id_palco = p.id;
+	
+
+
+
+select * from Detalhes_Shows;
+
+create view capacidade_3000_palcos as
+select nome, capacidade
+from
+palcos p where capacidade > 3000;
+
+select * from capacidade_3000_palcos;
+insert into Palcos values (3, 'Palco Deivisson',10000);
+
+create or replace view capacidade_3000_palcos as
+select 
+	nome,
+	capacidade,
+	(Capacidade / 1000) as "Capacidade em Milhares"
+from
+palcos p where
+	capacidade > 3000;
+
+drop view if exists capacidade_3000_palcos;
