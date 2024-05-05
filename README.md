@@ -2,6 +2,9 @@
 
 Este repositório contém o material para o curso de Banco de Dados, cobrindo desde os conceitos fundamentais até técnicas avançadas de manipulação de dados com PostgreSQL.
 
+## Instrutor
+Juliano de Sousa Cervelin
+
 ## Sumário
 
 - [Aula 1: Introdução a Bancos de Dados](#aula-1-introdução-a-bancos-de-dados)
